@@ -9,10 +9,12 @@ const txEnglish = document.querySelector('#text-english');
 const botonAccion1 = document.querySelector('.idiom-content');
 const botonMicrofon = document.querySelector('.microfone-container');
 // traductor
-botonAccion1.addEventListener('click', () => {
+const traducir = ()=>{
     let input = txEnglish.value;
     input.length > 0 ? traductor.traducir(input) : null;
-});
+}
+botonAccion1.addEventListener('click', traducir());
+botonAccion1.addEventListener('touchstart', traducir());
 // voz a texto
 function iniciar(event) {
     for (let i = event.resultIndex; i < event.results.length; i++) {
