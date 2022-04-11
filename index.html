@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>notes-traductor</title>
+</head>
+<body>
+    <header><h1>Traductor API</h1> <h3><a href="php/cerrarSesion.php">cerrar sesion</a> </h3></header>
+    <main>
+        <div class="traductor-container">
+            <div class="text-container">
+                <div class="text-content">
+                    <textarea class="text" id="text-english" placeholder="English"></textarea>
+                    <div class="copys">
+                        <div class="copy copy-text" title="copiar texto de este recuadro" onclick="copyToClick(document.getElementById('text-english'))">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M32 2h-24c-2.21 0-4 1.79-4 4v28h4v-28h24v-4zm6 8h-22c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h22c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm0 32h-22v-28h22v28z"/></svg>
+                        </div>
+                        <div class="copy copy-anki" title="copiar texto a formato plano de anki" onclick="copyAnki()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16,20H8a3,3,0,0,1-3-3V7A1,1,0,0,0,3,7V17a5,5,0,0,0,5,5h8a1,1,0,0,0,0-2ZM21,8.94a1.31,1.31,0,0,0-.06-.27l0-.09a1.07,1.07,0,0,0-.19-.28h0l-6-6h0a1.07,1.07,0,0,0-.28-.19l-.09,0L14.06,2H10A3,3,0,0,0,7,5V15a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V9S21,9,21,8.94ZM15,5.41,17.59,8H16a1,1,0,0,1-1-1ZM19,15a1,1,0,0,1-1,1H10a1,1,0,0,1-1-1V5a1,1,0,0,1,1-1h3V7a3,3,0,0,0,3,3h3Z" fill="#6563ff"/></svg>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="idiom-content" title="Traducir al español">
+                    <span>Ingles</span>
+                    <svg class="desktop-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve"><path d="M413.1,327.3l-1.8-2.1l-136-156.5c-4.6-5.3-11.5-8.6-19.2-8.6c-7.7,0-14.6,3.4-19.2,8.6L101,324.9l-2.3,2.6  C97,330,96,333,96,336.2c0,8.7,7.4,15.8,16.6,15.8v0h286.8v0c9.2,0,16.6-7.1,16.6-15.8C416,332.9,414.9,329.8,413.1,327.3z"/></svg>
+                </div>
+            </div>
+
+            <div class="microfone-container" title="grabar y pasar a texto">
+                <button >
+                   <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path class="heroicon-ui" d="M13 18.94V21h3a1 1 0 0 1 0 2H8a1 1 0 0 1 0-2h3v-2.06A8 8 0 0 1 4 11a1 1 0 0 1 2 0 6 6 0 1 0 12 0 1 1 0 0 1 2 0 8 8 0 0 1-7 7.94zM12 1a4 4 0 0 1 4 4v6a4 4 0 1 1-8 0V5a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v6a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2z"/></svg>
+                </button>
+            </div>
+
+            <div class="text-container">
+                <div class="text-content">
+                    <textarea class="text" id="text-spanish" placeholder="Espanish"></textarea>
+                    <div class="copys">
+                        <div class="copy copy-text" title="copiar texto de este recuadro" onclick="copyToClick(document.getElementById('text-spanish'))">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M32 2h-24c-2.21 0-4 1.79-4 4v28h4v-28h24v-4zm6 8h-22c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h22c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm0 32h-22v-28h22v28z"/></svg>
+                        </div>
+                        <div class="copy copy-anki" title="copiar texto a formato plano de anki" onclick="copyAnki()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16,20H8a3,3,0,0,1-3-3V7A1,1,0,0,0,3,7V17a5,5,0,0,0,5,5h8a1,1,0,0,0,0-2ZM21,8.94a1.31,1.31,0,0,0-.06-.27l0-.09a1.07,1.07,0,0,0-.19-.28h0l-6-6h0a1.07,1.07,0,0,0-.28-.19l-.09,0L14.06,2H10A3,3,0,0,0,7,5V15a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V9S21,9,21,8.94ZM15,5.41,17.59,8H16a1,1,0,0,1-1-1ZM19,15a1,1,0,0,1-1,1H10a1,1,0,0,1-1-1V5a1,1,0,0,1,1-1h3V7a3,3,0,0,0,3,3h3Z" fill="#6563ff"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="idiom-content idiom-contentes">
+                    <span>Español</span>
+                        <svg class="desktop-img" id="cam-responsive" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve"><path d="M413.1,327.3l-1.8-2.1l-136-156.5c-4.6-5.3-11.5-8.6-19.2-8.6c-7.7,0-14.6,3.4-19.2,8.6L101,324.9l-2.3,2.6  C97,330,96,333,96,336.2c0,8.7,7.4,15.8,16.6,15.8v0h286.8v0c9.2,0,16.6-7.1,16.6-15.8C416,332.9,414.9,329.8,413.1,327.3z"/></svg>
+                        <script>
+                            function responsiveButton(){
+                                if(screen.width <= 750){
+                                document.getElementById("cam-responsive").innerHTML = `<path d="M98.9,184.7l1.8,2.1l136,156.5c4.6,5.3,11.5,8.6,19.2,8.6c7.7,0,14.6-3.4,19.2-8.6L411,187.1l2.3-2.6  c1.7-2.5,2.7-5.5,2.7-8.7c0-8.7-7.4-15.8-16.6-15.8v0H112.6v0c-9.2,0-16.6,7.1-16.6,15.8C96,179.1,97.1,182.2,98.9,184.7z"/>`;
+                                }else{
+                                document.getElementById("cam-responsive").innerHTML = `<path d="M413.1,327.3l-1.8-2.1l-136-156.5c-4.6-5.3-11.5-8.6-19.2-8.6c-7.7,0-14.6,3.4-19.2,8.6L101,324.9l-2.3,2.6  C97,330,96,333,96,336.2c0,8.7,7.4,15.8,16.6,15.8v0h286.8v0c9.2,0,16.6-7.1,16.6-15.8C416,332.9,414.9,329.8,413.1,327.3z"/>`;
+                                }
+                            }
+                            window.addEventListener('resize',()=>{
+                                responsiveButton()
+                            })
+                            window.onload =  responsiveButton();
+                        </script>    
+                </div>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <p>Copyright &copy;Juandi_DT, todos los derechos reservados.
+        </p>
+    </footer>
+
+    <script src="js/class.js"></script>
+    <script src="js/traductor.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

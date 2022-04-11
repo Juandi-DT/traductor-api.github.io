@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    height: auto;
+    gap: 10px;
+  }
+}
+
+body hr {
+  width: 90%;
+}
+
+body header {
+  text-align: center;
+}
+
+body header h1 {
+  display: inline-block;
+  color: #000;
+  background: #fff;
+  mix-blend-mode: multiply;
+  position: relative;
+  font-family: IBM Plex Mono;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 83px;
+  letter-spacing: 0em;
+}
+
+body header h1:before {
+  content: '';
+  display: block;
+  width: 99%;
+  height: 99%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FBC2EB), color-stop(65.62%, #C0C1ED), color-stop(94.27%, #A6C1EE));
+  background: linear-gradient(180deg, #FBC2EB 0%, #C0C1ED 65.62%, #A6C1EE 94.27%);
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+
+body main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+}
+
+body main .traductor-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  body main .traductor-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .traductor-container .text-container {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body main .traductor-container .microfone-container {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  body main .traductor-container .text-container:nth-child(1) {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body main .traductor-container .text-container:nth-child(1) .idiom-content {
+    -webkit-transform: translateX(60px);
+            transform: translateX(60px);
+  }
+  body main .traductor-container .text-container:nth-child(3) {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  body main .traductor-container .text-container:nth-child(3) .idiom-content {
+    -webkit-transform: translateX(-60px);
+            transform: translateX(-60px);
+  }
+}
+
+body main .traductor-container svg {
+  fill: white;
+}
+
+body main .traductor-container svg path {
+  fill: white;
+}
+
+body main .traductor-container .text-container {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+}
+
+@media screen and (max-width: 750px) {
+  body main .traductor-container .text-container {
+    width: 100%;
+  }
+}
+
+body main .traductor-container .text-container .text-content {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-height: 300px;
+  min-height: 190px;
+  width: 100%;
+  border-radius: 15px;
+  background: -webkit-gradient(linear, left top, right top, from(#FBC2EB), to(#A6C1EE));
+  background: linear-gradient(90deg, #FBC2EB 0%, #A6C1EE 100%);
+}
+
+body main .traductor-container .text-container .text-content .text {
+  border-radius: 15px;
+  height: 258px;
+  width: 92%;
+  padding: 20px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 25px;
+  outline: none;
+  background: transparent;
+  border: none;
+  resize: none;
+}
+
+body main .traductor-container .text-container .text-content .copys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 57.5px;
+  height: 23px;
+}
+
+body main .traductor-container .text-container .text-content .copys .copy {
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+}
+
+body main .traductor-container .text-container .idiom-content {
+  background: -webkit-gradient(linear, left top, right top, from(#FBC2EB), to(#A6C1EE));
+  background: linear-gradient(90deg, #FBC2EB 0%, #A6C1EE 100%);
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 7px;
+  color: white;
+  cursor: pointer;
+}
+
+body main .traductor-container .text-container .idiom-content .desktop-img {
+  height: 25px;
+  width: 25px;
+}
+
+body main .traductor-container .text-container .idiom-contentes {
+  pointer-events: none;
+}
+
+body main .traductor-container .microfone-container {
+  border-radius: 200px;
+  background: -webkit-gradient(linear, left top, right top, from(#FBC2EB), to(#A6C1EE));
+  background: linear-gradient(90deg, #FBC2EB 0%, #A6C1EE 100%);
+}
+
+body main .traductor-container .microfone-container button {
+  width: 150px;
+  height: 150px;
+  border: none;
+  border-radius: 200px;
+  background: transparent;
+  padding: 20px;
+  cursor: pointer;
+}
+
+body main .traductor-container .microfone-container button svg {
+  width: 100%;
+  height: 100%;
+}
+
+body footer {
+  width: 100%;
+  text-align: center;
+}
+
+body footer p {
+  display: inline-block;
+  color: #4a4a4a;
+  mix-blend-mode: multiply;
+  position: relative;
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+/*# sourceMappingURL=style.css.map */
