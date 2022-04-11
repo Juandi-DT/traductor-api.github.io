@@ -1,16 +1,32 @@
-# Juandi-DT.github.io
+# traductor-api.github.io
 traductor con la API de MyMemory API
 
-utilizacion de la tecnologia de traduccion de la API de MyMemory,
+utilización de la tecnología de traducción de la API de MyMemory,
+# Como traducir:
 
-ademas de poder copiar la traduccion o el texto original introducido,
+Para ello simplemente ya con el texto introducido  en el recuadro izquierdo solo le das un click o un toque(si estas en movile) en su respectivo recuadro con el nombre del idioma(por default ingles,ya que solo hay para traducción de ingles a español por ahora).
 
-tiene otra opcion de copiar la cual nos copia las traducciones que le vayamos pasando al presionar dicho boton, y nos copia las traducciones para un formato plano(.txt)
-para asi utilizarlo para importarlo en aplicaciones como anki.
+# Funciones:
 
-__
-## Como usar?
-1. escribes el texto en ingles a traducir a español o mantines presionado el icono del microfono y dices lo que quieres que escriba.
-2. despues simplemente puedes traducirlo al darle al boton inferior que dice ingles.
-3. tambien puedes copiar el texto de cualquier recuadro dandole al icono de copiar mas a la derecha
-4. o puedes copiar o agregar a cache en formato anki con el icono de copiar mas a la izquierda.
+## 1.  Micrófono:
+
+Al mantener presionado el micrófono en la pantalla, podrás decir lo que quieras y este te lo transcribirá en el recuadro del idioma original o el que esta mas a la izquierda(en ordenadores y en móviles el que esta mas arriba).
+
+## 2. Copiar y Pegar:
+
+En los dos recuadros del traductor hay dos botones que a continuación veremos sus funciones:
+1.  solo copiar y pegar:
+    > para esto se utiliza el botón mas a la derecha el cual copia el texto que haya en el recuadro de traducción o si lo haces en el recuadro de entrada de texto, se copiara el texto que este en este.
+
+2. copiar en formato plano para apps como Anki:
+    > Si no sabes que es Anki, es mejor que no utilizes esta opción ya que puede traer confusiones.
+
+    Resumiendo un poco Anki es una app para memorizar y aprender algún contenido que le hayas ingresado, utilizando una técnica llamada repetición espaciada y en conjunto de otras muy buenas para la memorización y aprendizaje.
+
+    Al darle a este botón se guardara en cache(sesión storage) lo que vayas traduciendo,guardando el texto original y su traducción, separado por un ';',  y cuando le des nuevamente a este botón te agregara a la traducción ya copiada la nueva traducción ingresada, estas traducciones diferentes las separa con un salto de linea.
+
+    Este formato con separación de ';' y salto de linea es el formato de texto plano admitido por la app Anki.
+
+    > Se puede utilizar para pegar este 'cache' en un archivo .txt para después importarlo en la aplicación Anki.
+
+    >Aviso esta función de guardado en 'cache' solo es para guardar las tarjetas en formato de tarjeta Básica de anki(solo con un frente y un reverso);
