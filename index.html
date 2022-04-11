@@ -12,7 +12,7 @@
     <header><h1>Traductor API</h1></header>
     <main>
         <div class="traductor-container">
-            <div class="text-container" style="z-index:30">
+            <div class="text-container">
                 <div class="text-content">
                     <textarea class="text" id="text-english" placeholder="English"></textarea>
                     <div class="copys">
@@ -37,9 +37,9 @@
                 </button>
             </div>
 
-            <div class="text-container" style="z-index:10">
+            <div class="text-container">
                 <div class="text-content">
-                    <textarea class="text" id="text-spanish" placeholder="Spanish"></textarea>
+                    <textarea class="text" id="text-spanish" placeholder="Espanish"></textarea>
                     <div class="copys">
                         <div class="copy copy-text" title="copiar texto de este recuadro" onclick="copyToClick(document.getElementById('text-spanish'))">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M32 2h-24c-2.21 0-4 1.79-4 4v28h4v-28h24v-4zm6 8h-22c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h22c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm0 32h-22v-28h22v28z"/></svg>
@@ -70,8 +70,23 @@
         </div>
     </main>
     <hr>
+    <div class="help">
+        <a href="#IrVentanaFlotante"> <img src="icon/help.svg" id="svg-icon-help" alt="help icon"></a>
+    </div>
+    <div id="IrVentanaFlotante" class="modal">
+        <div class="ventana">
+          <a href="#" id='cross'>
+          <img src="icon/cross.svg" alt="">
+          </a>
+          <div class="contenido-ayuda">
+            <h2>¿Como funciona?</h2>
+            <p>Para saberlo visita la documentacion en <a href="https://github.com/Juandi-DT/traductor-api.github.io/blob/main/README.md">documentacion</a> </p>
+          </div>
+        </div>  
+    </div>
     <footer>
         <p>Copyright &copy;<a href="https://github.com/Juandi-DT/Juandi-DT.github.io">Juandi_DT</a>, todos los derechos reservados.
+        </p>
     </footer>
 
     <script src="js/class.js"></script>
