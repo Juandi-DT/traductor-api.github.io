@@ -1,8 +1,10 @@
-# traductor-api.github.io 
+# traductor API
 
 traductor con la API de MyMemory API 
 
-utilización de la tecnología de traducción de la API de MyMemory, 
+utilización de la tecnología de traducción de la API de MyMemory.
+
+[ Puedes visitar la página traductor API aquí. ]( https://juandi-dt.github.io/traductor-api.github.io/ )
 
 # Como traducir: 
 
