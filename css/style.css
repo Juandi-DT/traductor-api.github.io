@@ -115,6 +115,7 @@ body main .traductor-container {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+            z-index: 30;
   }
   body main .traductor-container .text-container:nth-child(1) .idiom-content {
     -webkit-transform: translateX(60px);
@@ -130,6 +131,7 @@ body main .traductor-container {
             flex-direction: column-reverse;
     -webkit-transform: translateY(-40px);
             transform: translateY(-40px);
+            z-index: 20;
   }
   body main .traductor-container .text-container:nth-child(3) .idiom-content {
     -webkit-transform: translateX(-60px);
